@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 contract ToDoList {
-	uint public taskCount 0;
+	uint public taskCount = 0;
 	
 	struct Task {
 		uint id;
@@ -17,7 +17,7 @@ contract ToDoList {
 
 	function createTask(string memory _content) public {
 		taskCount++;
-		tasks[taskCount] = new Task(taskCount, content, false);
+		tasks[taskCount] = Task(taskCount, _content, false);
 	}
 
 }
